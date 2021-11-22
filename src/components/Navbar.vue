@@ -11,7 +11,7 @@
                     <li class="nav-item">
                         <span v-if='home' to='/' class="text-danger fw-bold pb-2 border-danger border-bottom" @click="handleLogOut">Log Out</span>
                         <router-link v-if='login' to='/'>Sign Up</router-link>
-                        <router-link v-else to='/login'>Log In</router-link>
+                        <router-link v-if='signup' to='/login'>Log In</router-link>
                     </li>
                 </ul>
             </div>
@@ -25,24 +25,25 @@ export default {
     data() {
         return {
             home: false,
-            login: false
+            login: false,
+            signup: true
         }
     },
     watch: {
         $route: function() {
             if (this.$route.path === '/home') {
                 this.home = true
+                this.signup = false
                 this.login = false
             } else if ((this.$route.path === '/login')) {
                 this.login = true
+                this.home = false
+                this.signup = false
             } else {
+                this.signup = true
                 this.login = false
+                this.home = false
             }
-        }
-    },
-    mounted() {
-        if (this.$route.path === '/home') {
-            this.home = true
         }
     },
     methods: {
