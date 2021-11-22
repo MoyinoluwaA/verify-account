@@ -1,8 +1,8 @@
 <template>
-	<div class="container mt-5">
+	<div class="container mt-5 px-5 px-sm-0">
 		<h1 class="text-center text-danger">Account Verification made easy!</h1>
 		<p class="text-center">Fill in the account number and select a bank. It's that easy.</p>
-		<div class="col-6 mx-auto mt-5">
+		<div class="col-sm-8 col-md-6 mx-auto mt-5">
 			<form @submit.prevent='handleSubmit'>
 				<InputBox
 					identifier='account_number'

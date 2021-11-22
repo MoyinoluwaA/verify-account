@@ -7,7 +7,7 @@
             </button>
             
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto mt-3 mb-2 my-lg-0">
                     <li class="nav-item">
                         <span v-if='home' to='/' class="text-danger fw-bold pb-2 border-danger border-bottom" @click="handleLogOut">Log Out</span>
                         <router-link v-else to='/login'>Log In</router-link>

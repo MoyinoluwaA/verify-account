@@ -1,12 +1,12 @@
 <template>
 
-    <div class="container">
+    <div class="container px-5 px-sm-0">
         <div class='row align-items-center pt-5'>
-            <div class="col-6">
+            <div class="col-md-6 mb-4 mb-md-0">
                 <h1 class="fw-bold">Log <span class="text-danger">In</span></h1>
                 <p class="mt-4 fw-bolder">Account verification made easy wih Veri<span class="text-danger">A</span></p>
             </div>
-            <div class="col-5 offset-1">
+            <div class="col-md-5 offset-md-1">
 				<form @submit.prevent='handleSubmit'>
 					<InputBox
 						identifier='email'
