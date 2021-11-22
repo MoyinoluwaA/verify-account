@@ -79,6 +79,7 @@ export default {
                     const response = await axios.post(`${ baseUrl }/api/users/register`, this.formData)
         
                     if (response.status === 201) {
+                        this.resetForm()
                         messageTag.className = 'text-success'
                         messageTag.innerText = 'Go to email to verify account'
                     } 
@@ -92,6 +93,12 @@ export default {
                     messageTag.innerText = 'Error registering user'
                 }
             }
+        },
+        resetForm() {
+            this.formData.first_name = ''
+            this.formData.last_name = ''
+            this.formData.email = ''
+            this.formData.password = ''
         }
     }
 }
