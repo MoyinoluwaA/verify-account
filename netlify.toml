@@ -1,7 +1,6 @@
 ## netlify.toml
 
 [[redirects]]
-  from = "/users/verify/*"
-  to = "/users/verify/:email"
-  status = 200
-  force = true
+    from = "/*"
+    to = "/index.html"
+    status = 200
