@@ -10,6 +10,7 @@
                 <ul class="navbar-nav ms-auto mt-3 mb-2 my-lg-0">
                     <li class="nav-item">
                         <span v-if='home' to='/' class="text-danger fw-bold pb-2 border-danger border-bottom" @click="handleLogOut">Log Out</span>
+                        <router-link v-if='login' to='/'>Sign Up</router-link>
                         <router-link v-else to='/login'>Log In</router-link>
                     </li>
                 </ul>
@@ -23,13 +24,18 @@ export default {
     name: 'Navbar',
     data() {
         return {
-            home: false
+            home: false,
+            login: false
         }
     },
     watch: {
         $route: function() {
             if (this.$route.path === '/home') {
                 this.home = true
+            } else if ((this.$route.path === '/login')) {
+                this.login = true
+            } else {
+                this.login = false
             }
         }
     },
