@@ -1,0 +1,7 @@
+## netlify.toml
+
+[[redirects]]
+  from = "/users/verify/*"
+  to = "/users/verify/[email].html"
+  status = 200
+  force = true
