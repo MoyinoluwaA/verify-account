@@ -32,6 +32,7 @@ export default {
         $route: function() {
             if (this.$route.path === '/home') {
                 this.home = true
+                this.login = false
             } else if ((this.$route.path === '/login')) {
                 this.login = true
             } else {
