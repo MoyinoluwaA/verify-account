@@ -2,6 +2,6 @@
 
 [[redirects]]
   from = "/users/verify/*"
-  to = "/users/verify/[email].html"
+  to = "/users/verify/:email"
   status = 200
   force = true
